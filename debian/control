@@ -1,0 +1,49 @@
+Source: nomad
+Section: devel
+Priority: extra
+Maintainer: Massimo Cetra <mcetra+github@gmail.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.8
+Homepage: https://github.com/hashicorp/nomad
+
+Package: nomad
+Architecture: all
+Depends: libc6 (>= 2.3.2), init-system-helpers (>= 1.18~), pipexec, procps
+Description: distributed, highly available, datacenter-aware scheduler
+ Nomad is a cluster manager, designed for both long lived services and
+ short lived batch processing workloads. Developers use a declarative job
+ specification to submit work, and Nomad ensures constraints are satisfied
+ and resource utilization is optimized by efficient task packing. Nomad
+ supports all major operating systems and virtualized, containerized,
+ or standalone applications.
+ The key features of Nomad are:
+ .
+  * Docker Support: Jobs can specify tasks which are Docker containers.
+  Nomad will automatically run the containers on clients which have Docker
+  installed, scale up and down based on the number of instances request,
+  and automatically recover from failures.
+ .
+  * Multi-Datacenter and Multi-Region Aware: Nomad is designed to be a
+  global-scale scheduler. Multiple datacenters can be managed as part of a
+  larger region, and jobs can be scheduled across datacenters if requested.
+  Multiple regions join together and federate jobs making it easy to run
+  jobs anywhere.
+ .
+  * Operationally Simple:
+  Nomad runs as a single binary that can be either a client or server, and
+  is completely self contained. Nomad does not require any external
+  services for storage or coordination. This means Nomad combines the
+  features of a resource manager and scheduler in a single system.
+ .
+  * Distributed and Highly-Available: Nomad servers cluster together and
+  perform leader election and state replication to provide high
+  availability in the face of failure. The Nomad scheduling engine is
+  optimized for optimistic concurrency allowing all servers to make
+  scheduling decisions to maximize throughput.
+ .
+  * HashiCorp Ecosystem: Nomad integrates with the entire HashiCorp
+  ecosystem of tools. Along with all HashiCorp tools, Nomad is designed in
+  the unix philosophy of doing something specific and doing it well.  Nomad
+  integrates with tools like Packer, Consul, and Terraform to support
+  building artifacts, service discovery, monitoring and capacity
+  management.

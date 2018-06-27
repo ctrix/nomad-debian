@@ -1,0 +1,15 @@
+[Unit]
+Description=Nomad
+Documentation=https://nomadproject.io/docs/
+After=network.target
+
+[Service]
+Environment="DAEMON_ARGS=agent -config /etc/nomad"
+EnvironmentFile=-/etc/default/%p
+ExecStart=/usr/bin/nomad $DAEMON_ARGS
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
