@@ -26,7 +26,7 @@ The examples will be included in the debian package in the share/docs/nomad fold
 This package extract a few bytes from the original package by Dmitry Smirnov.
 Configuragions should be placed under `/etc/nomad` and store data will be saved under `/var/lib/nomad/`.
 The package will create both directories.
-The `nomad` bynary will be is installed to `/usr/bin/nomad`.
+The `nomad` binary will be is installed to `/usr/bin/nomad`.
 
 ## Agent Configs
 
