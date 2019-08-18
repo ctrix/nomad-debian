@@ -1,3 +1,9 @@
+nomad (0.9.4) unstable; urgency=low
+
+  * New upstream version
+
+ -- Massimo Cetra <mcetra@gmail.com>  Sun, 18 Aug 2019 02:12:00 +0100
+
 nomad (0.9.3-0~mc1) unstable; urgency=low
 
   * New upstream version
